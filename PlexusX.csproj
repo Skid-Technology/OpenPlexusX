@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>PlexusX</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Assets\Icons\app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\Icons\PlexusX.ico" />
+    <None Remove="Assets\Brand\*.png" />
+    <None Remove="Assets\Presets\preset-*.png" />
+    <None Remove="Assets\Shaders\PlexusX.saturation.hlsl" />
+    <EmbeddedResource Include="Assets\Icons\PlexusX.ico" LogicalName="PlexusX.ico" />
+    <EmbeddedResource Include="Assets\Brand\*.png" LogicalName="%(Filename)%(Extension)" />
+    <EmbeddedResource Include="Assets\Presets\preset-*.png" LogicalName="%(Filename)%(Extension)" />
+    <EmbeddedResource Include="Assets\Shaders\PlexusX.saturation.hlsl" LogicalName="PlexusX.saturation.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SharpDX.DXGI">
+      <HintPath>libs\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11">
+      <HintPath>libs\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>libs\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.D3DCompiler">
+      <HintPath>libs\SharpDX.D3DCompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="NvAPIWrapper">
+      <HintPath>libs\NvAPIWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.SDK.NET">
+      <HintPath>libs\Microsoft.Windows.SDK.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management">
+      <HintPath>libs\System.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="WinRT.Runtime">
+      <HintPath>libs\WinRT.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
